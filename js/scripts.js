@@ -1,5 +1,5 @@
 class BoxShadowGenerator {
-    constructor(
+    constructor (
         horizontal, 
         horizontalRef, 
         vertical, 
@@ -24,8 +24,18 @@ class BoxShadowGenerator {
         this.previewBox = previewBox
         this.rule = rule
         this.webkitRule = webkitRule
-        this.mozRule = mozRule
-    }
+        this.mozRule = mozRule;
+       }
+
+
+       
+       initialize () {
+    this.horizontalRef.value = this.horizontal.value
+    this.verticalRef.value = this.vertical.value
+    this.spreadRef.value = this.spread.value
+    this.blurRef.value = this.blur.value
+
+ }
 }
     
 
@@ -62,7 +72,7 @@ const boxShadow = new BoxShadowGenerator (
 
 )
 
-console.log(boxShadow)
+boxShadow.initialize() 
 
 
 
